@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/index';
+import { fetchPosts, displayActiveBlock } from '../actions/index';
 
 class c1 extends Component {
 
@@ -11,7 +11,11 @@ class c1 extends Component {
   render() {
       console.log(this.props.posts, '------------------xxxxxx')
     return (
-      <div className="red">Component c1</div>
+        <div>
+            <div className="c1">Component c1
+                <button onClick={(e) => this.props.displayActiveBlock('myC1_button') }>CLICK C1</button>
+            </div>
+        </div>
     );
   }
 }
@@ -22,7 +26,7 @@ function mapStateToProps(state) {
     return { posts: state.posts}
 }
 
-export default connect(mapStateToProps, {fetchPosts})(c1);
+export default connect(mapStateToProps, {fetchPosts, displayActiveBlock})(c1);
 
 
 

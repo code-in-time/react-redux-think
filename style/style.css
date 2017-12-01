@@ -1,0 +1,21 @@
+button {
+    display: inline-block;
+}
+
+.c1, .c2, .c3, .c4 {
+    margin: 10px 0;
+}
+
+.c1 {
+    background: red;
+}
+
+.c2 {
+    background: yellow;
+}
+.c3 {
+    background: green;
+}
+.c4 {
+    background: mediumaquamarine;
+}
